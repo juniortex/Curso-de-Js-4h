@@ -44,7 +44,7 @@ document.write(`Resultado do código referente a constante: ${constante} <br><hr
 
 /* 2. Tipos Primitivos - Valores e Referências:*/
 
-/* Valores - String, Number, Boolean, Underfined*/
+/* Valores - String, Number, Boolean, Underfined, Null*/
 
 // String:
 // É o tipo de valor que contém letras, números, símbolos e caracteres especiais.
@@ -67,11 +67,116 @@ document.write(`Resultado do tipo primitivo ${typeof(idade)}: ${idade}<br>`)
 
 let aprovado = true
 
-document.write(`Resultado do tipo primitivo ${typeof(aprovado)}: ${aprovado}  (Aprovado!)`)
+document.write(`Resultado do tipo primitivo ${typeof(aprovado)}: ${aprovado}  (Verdadeiro)<br>`)
 
-// Underfned:
-// É o tipo de valor que define condições verdadeiras ou falsas.
+// Underfined:
+// É o tipo de valor que não foi definido.
 
-let aprovado = true
+let indefinido
 
-document.write(`Resultado do tipo primitivo ${typeof(aprovado)}: ${aprovado}  (Aprovado!)`)
+document.write(`Resultado do tipo primitivo ${typeof(indefinido)}: ${indefinido} (Indefinido)<br>`)
+
+// Null:
+// É o tipo de valor que da um reset na variável.
+
+let reseta = null
+
+document.write(`Resultado do tipo primitivo ${typeof(reseta)}: ${reseta} (reset) <br><hr>`)
+
+
+/* Referências - Objects, Arrays, Functions*/
+
+// Objects:
+// É um tipo que junta diversas informações em um só lugar.
+
+let pessoa = {
+    nome: 'Osvaldo', //nome(chave): 'Osvaldo'(valor)
+    sobrenome: 'Junior',
+    idade: 33
+}
+
+console.log(pessoa)
+
+document.write(`${pessoa.nome} ${pessoa.sobrenome}, está com ${pessoa.idade} anos...<br>`)
+
+// Arrays:
+// É um conjunto de dados que são armazenados em índices.
+
+let array = [true,26,'Osvaldo',null] //[0,1,2,3] cada valor representa um índice.
+
+console.log(array)
+
+document.write(`Exemplo de array com ${array.length} índices, sendo o último vázio: [${array}null]<br><hr>`)
+
+// Functions:
+// Conceito:
+
+let cor = 'blue'
+
+function mudarCor(modcor){ 
+    cor = modcor
+}
+
+document.write(`${cor} => `)
+
+mudarCor('vermelho')
+
+document.write(`${cor}<br>`)
+
+// Tipos de função - sem retorno e com retorno de resultado:
+
+// Sem retorno de resultado:
+function mostrarNome(){
+    nome = 'Dani'
+}
+
+mostrarNome()
+document.write(`${nome}<br>`)
+
+// Com retorno de resultado:
+function duplicarValor(valor){
+    return valor*2
+}
+
+let resultado = duplicarValor(2)
+document.write(`${resultado}<br><hr>`)
+
+
+/* 3. Operadores - Aritméticos, Atribuíção, Comparação, Lógicos, Bitwise:*/
+
+// Operadores Aritméticos:
+let salario = 1200
+// +  (soma)
+document.write(`${salario + salario}<br>`)
+// -  (menos)
+document.write(`${salario - salario}<br>`)
+// *  (vezes)
+document.write(`${salario * salario}<br>`)
+// /  (dividir)
+document.write(`${salario / salario}<br>`)
+// ** (elevado)
+document.write(`${salario ** salario}<br>`)
+// ++ (incremento)
+document.write(`${++salario}<br>`)
+// -- (decremento)
+document.write(`${--salario}<br>`)
+
+
+
+// Operadores Atribuíção:
+
+// = (a variável recebe um valor)
+let val = 10
+document.write(`${val}<br>`)
+
+// += (a veriável recebe o valor + valor)
+val += val
+document.write(`${val}<br>`)
+
+// -= (a variável recebe o valor - valor)
+val -= val
+document.write(`${val}<br>`)
+
+// Operadores Comparação:
+// Operadores Lógicos:
+// Operadores Bitwise:

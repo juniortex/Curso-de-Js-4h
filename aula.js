@@ -139,7 +139,7 @@ function duplicarValor(valor){
 }
 
 let resultado = duplicarValor(2)
-document.write(`${resultado}<br><hr>`)
+document.write(`${resultado}<hr>`)
 
 
 /* 3. Operadores - Aritméticos, Atribuíção, Comparação, Lógicos, Bitwise:*/
@@ -159,7 +159,7 @@ document.write(`${salario ** salario}<br>`)
 // ++ (incremento)
 document.write(`${++salario}<br>`)
 // -- (decremento)
-document.write(`${--salario}<br>`)
+document.write(`${--salario}<hr>`)
 
 
 
@@ -167,7 +167,7 @@ document.write(`${--salario}<br>`)
 
 // = (a variável recebe um valor)
 let val = 10
-document.write(`${val}<br>`)
+document.write(val,'<br>')
 
 // += (a veriável recebe o valor + valor)
 val += val
@@ -175,8 +175,55 @@ document.write(`${val}<br>`)
 
 // -= (a variável recebe o valor - valor)
 val -= val
-document.write(`${val}<br>`)
+document.write(`${val}<hr>`)
 
-// Operadores Comparação:
-// Operadores Lógicos:
+
+
+// Operadores de Comparação - Binários e Ternários:
+
+// Binários:
+// São aqueles que possuem comparação entre dois valores (igualdade ou diferênça):
+
+// Igualdade Estrita:
+document.write(('1' === 1)+'<br>')
+
+// Igualdade parcial:
+document.write(('1' == 1)+'<br>')
+
+// Diferênca Estrita:
+document.write(('1' !== 1)+'<br>')
+
+// Diferênca parcial:
+document.write(('1' != 1)+'<hr>')
+
+// Ternários - ? :
+// São aqueles que possuem três partes executáveis:
+// Comparação ? ação se verdadeiro : ação se falso:
+let pontos = 200
+let tipo = pontos > 100 ?'Premium':'Comum'
+document.write(tipo,'<hr>')
+
+
+// Operadores Lógicos - e(&&), ou(||) e não(!):
+// && - retorna true ou false:
+// true, se os dois operandos forem true.
+// false, se os dois operandos forem false.
+document.write(true && true,'<br>')
+document.write(true && false,'<br>')
+document.write(false && false,'<br>')
+document.write(false && true,'<hr>')
+
+// || - retorna true ou false:
+// true, se pelo menos um dos dois operandos forem true.
+// false, se os dois operandos forem false.
+document.write(true || true,'<br>')
+document.write(true || false,'<br>')
+document.write(false || false,'<br>')
+document.write(false || true,'<hr>')
+
+// ! - retorna uma negação:
+document.write(!false,'<br>') //não é falso
+document.write(!true,'<hr>') //não é verdadeiro
+
+
 // Operadores Bitwise:

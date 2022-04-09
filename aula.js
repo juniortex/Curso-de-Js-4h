@@ -225,5 +225,53 @@ document.write(false || true,'<hr>')
 document.write(!false,'<br>') //não é falso
 document.write(!true,'<hr>') //não é verdadeiro
 
+// Comparções com valores não booleanos:
+/* Valores Falsy(falsos):
+// underfined
+// null
+// 0
+// false
+// ''
+// NaN - Not a Number*/
+
+// Valores Truthy(são todos os valores não falsos).
 
 // Operadores Bitwise:
+
+//=================================================
+// 1º Mini-Projeto
+
+// Trocando valores de variáveis:
+let cor1 = 'azul'
+let cor2 = 'Vermelho'
+document.write(`${cor1}<br>${cor2}<hr>`)
+
+// Resolução:
+document.write('<strong>Trocando as cores de lugar:</strong><br>')
+let cort = cor1
+cor1 = cor2
+cor2 = cort
+document.write(`${cor1}<br>${cor2}<hr>`)
+//=================================================
+
+// Condições - if, else, else if:
+// Condições Simples - if, else:
+let valor = 10
+if (valor <= 10){
+    document.write(`Curtando R$${valor}, o item está barato<hr>`)
+} else{
+    document.write(`Curtando R$${valor}, o item está caro<hr>`)
+}
+
+// Condições Compostas - if, else, else if:
+let hora = new Date().toLocaleTimeString()
+
+if (hora >= 6 && hora <= 12){
+    document.write(`${hora}. Bom dia!<hr>`)
+}
+else if (hora > 12 && hora <= 18){
+    document.write(`${hora}. Boa terde!<hr>`)
+}
+else {
+    document.write(`${hora}. Boa noite!<hr>`)
+}

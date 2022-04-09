@@ -264,14 +264,35 @@ if (valor <= 10){
 }
 
 // Condições Compostas - if, else, else if:
-let hora = new Date().toLocaleTimeString()
+let hora = new Date().getHours()
 
 if (hora >= 6 && hora <= 12){
     document.write(`${hora}. Bom dia!<hr>`)
 }
 else if (hora > 12 && hora <= 18){
-    document.write(`${hora}. Boa terde!<hr>`)
+    document.write(`${hora}. Boa tarde!<hr>`)
 }
 else {
     document.write(`${hora}. Boa noite!<hr>`)
 }
+// As condições tbm podem ser aninhadas, formando uma estrutura mais complexa de condições.
+
+// Switch Case:
+let user = 'Premium'
+
+switch (user){
+    case 'Comum':
+        document.write(`Usuário ${user}: vojcê não tem acesso Premium...`)
+        break
+    case 'Vip':
+        document.write(`Usuário ${user}: você não tem acesso Premium...`)
+        break
+    case 'Premium':
+        document.write(`Usuário ${user}: Bem vindo!`)
+        break
+    default:
+        document.write(`Usuário inválido!`)
+}
+document.write('<br>')
+
+// Laço/Loop For:

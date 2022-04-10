@@ -240,7 +240,6 @@ document.write(!true,'<hr>') //não é verdadeiro
 
 //=================================================
 // 1º Mini-Projeto
-
 // Trocando valores de variáveis:
 let cor1 = 'azul'
 let cor2 = 'Vermelho'
@@ -293,6 +292,80 @@ switch (user){
     default:
         document.write(`Usuário inválido!`)
 }
-document.write('<br>')
+document.write('<hr>')
 
-// Laço/Loop For:
+/* Laço/Loop:*/
+
+// For:
+document.write(`<strong>Loop for de 1 a 10:</strong><br>`)
+for(let i = 1; i <= 10; i++){
+    document.write(`${i}<br>`)
+}
+document.write('<hr>')
+
+//while:
+document.write(`<strong>Loop while de 1 a 10:</strong><br>`)
+let i = 1
+while (i <= 10){
+    document.write(`${i}<br>`)
+    i++
+}
+document.write('<hr>')
+
+//do while:
+document.write(`<strong>Loop do while de 1 a 10:</strong><br>`)
+let c = 1
+do{
+    document.write(`${c}<br>`)
+    c++
+}while (c <= 10)
+document.write('<hr>')
+
+//For-in:
+const p = {
+    //chave: 'valor'
+    nome: 'Jhonatan',
+    idade: 25
+}
+for(let chave in p){
+    document.write(`${chave}: `,p[chave] + '<br>')
+}
+document.write('<hr>')
+
+const cores = ['azul', 'vermelho', 'amarelo']
+
+for(let indice in cores){
+    document.write(cores[indice] + '<br>')
+}
+document.write('<hr>')
+
+// For-of:
+for(let cor of cores){
+    document.write(cor + '<br>')
+}
+document.write('<hr>')
+
+//=================================================
+// 2º Mini-Projeto
+// Máximo entra dois valores:
+function max(n1,n2){
+    return n1 > n2 ? n1 : n2
+}
+let valorMaior = max(1,2)
+document.write(valorMaior + '<hr>')
+
+//=================================================
+// 3º Mini-Projeto
+// FizzBuzz:
+// Divisível por 3 => retorn 'Fizz'
+// Divisível por 5 => retorn 'Buzz'
+// Divisível por 3 e 5 => retorn 'FizzBuzz'
+// Não é divisível por 3 ou 5 => retorn 'Entrada'
+// Não é um número => return 'Não é um número'
+
+const result = fizzBuzz(15)
+document.write(result)
+
+function fizzBuzz(entrada){
+
+}

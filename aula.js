@@ -363,12 +363,17 @@ document.write(valorMaior + '<hr>')
 // Não é divisível por 3 ou 5 => retorn 'Entrada'
 // Não é um número => return 'Não é um número'
 
-const result = fizzBuzz('a')
+const result = fizzBuzz(15)
 document.write(result)
 
 function fizzBuzz(entrada){
-    if (typeof entrada !== 'number'){
+    if (typeof entrada !== 'number')
         return 'Não é um número.'
-    } else {
-    }
+    if (entrada % 3 === 0 && entrada % 5 === 0)
+        return 'FizzBuzz'
+    if (entrada % 3 === 0)
+        return 'Fizz'
+    if (entrada % 5 === 0)
+        return 'Buzz'
+    return entrada
 }

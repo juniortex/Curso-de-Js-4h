@@ -364,7 +364,7 @@ document.write(valorMaior + '<hr>')
 // Não é um número => return 'Não é um número'
 
 const result = fizzBuzz(15)
-document.write(result)
+document.write(result + '<hr>')
 
 function fizzBuzz(entrada){
     if (typeof entrada !== 'number')
@@ -376,4 +376,21 @@ function fizzBuzz(entrada){
     if (entrada % 5 === 0)
         return 'Buzz'
     return entrada
+}
+
+//==================================================
+//  (Mini-Projeto 4) - Medidor de Velocidade
+//==================================================
+
+// Velocidade máxim de até 70km => retorna 'Ok'
+// A cada 5km acima de 70km => perde 1 ponto na carteira
+// Caso receba menos 12 pontos => 'Carteira suspensa.'
+// Dica: usar Math.Floor()
+
+const radar = verificarVelocidade(70)
+document.write(radar)
+
+function verificarVelocidade(velocidade){
+    if (velocidade <= 70)
+    return 'Ok'
 }

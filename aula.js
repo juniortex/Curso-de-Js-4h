@@ -387,10 +387,12 @@ function fizzBuzz(entrada){
 // Caso receba menos 12 pontos => 'Carteira suspensa.'
 // Dica: usar Math.Floor()
 
-const radar = verificarVelocidade(70)
+const radar = verificarVelocidade(80)
 document.write(radar)
 
 function verificarVelocidade(velocidade){
     if (velocidade <= 70)
-    return 'Ok'
+        return 'Ok'
+    else
+        return velocidade
 }

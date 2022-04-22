@@ -387,12 +387,131 @@ function fizzBuzz(entrada){
 // Caso receba menos 12 pontos => 'Carteira suspensa.'
 // Dica: usar Math.Floor()
 
-const radar = verificarVelocidade(80)
-document.write(radar)
+const radar = verificarVelocidade(120)
+document.write(radar + '<hr>')
 
 function verificarVelocidade(velocidade){
-    if (velocidade <= 70)
+    let limiteVel = 70
+    let kmPonto = 5
+    let limitePon = 12
+    let pontos = Math.floor((velocidade-limiteVel)/kmPonto)
+    let aviso = `Você excedeu o limite de velocidade!<br>Perdeu ${pontos} pontos na carteira.`
+    if (velocidade <= limiteVel)
         return 'Ok'
-    else
-        return velocidade
+    else {
+        if (pontos >= limitePon)
+            return `${aviso}<br>CARTEIRA SUSPENSA!`
+        else
+            return `${aviso}`
+    }
 }
+
+
+//==================================================
+//  (Mini-Projeto 5) - Par ou Impar?
+//==================================================
+// Receber uma quantidade de valores para avaliar
+// Função exibe se cada valor é par ou impar
+
+exibirParouImpar(5)
+
+function exibirParouImpar(valores){
+    for(let v = 1; v <= valores; v++){
+        if (v%2 == 0)
+            document.write(`${v} "Par".<hr>`)
+        else
+            document.write(`${v} "Impar".<hr>`)
+    }
+}
+
+
+//==================================================
+//  (Mini-Projeto 6) - Encontre o String
+//==================================================
+// Criar um método para ler propriedades de um objeto
+// Exibir somente as propriedades do tipo string que estão nesse objeto
+
+const filme = {
+    titulo : 'Vingadores',
+    ano : 2020,
+    diretor: 'Robin',
+    personagem: 'Thor'
+}
+
+exibProp(filme)
+function exibProp(objeto){
+    for(propriedade in objeto)
+        if (typeof objeto[propriedade] === 'string')
+            document.write(`${propriedade}: ${objeto[propriedade]}<br>`)
+}
+document.write('<hr>')
+
+
+//==================================================
+//  (Mini-Projeto 7) - Multiplos de 3 e 5
+//==================================================
+// Criar função somar() que retorna a soma de todos os multiplos de 3 e 5
+
+somar3e5(15)
+function somar3e5(limite){
+    let soma = 0
+    for(c = 1; c <= limite; c++){
+        if (c%3 === 0 || c%5 === 0){
+            soma += c
+        }
+    }
+    document.write(`<br>A soma dos multiplos de 3 e 5, entre 1 e ${limite} é: ${soma}<hr>`)
+}
+
+
+//==================================================
+//  (Mini-Projeto 8) - Média de nota escolar
+//==================================================
+// Obter a média a partir de um array
+
+//000-059: F
+//060-069: D
+//070-079: C
+//080-089: B
+//090-100: A
+
+const Notas = [90,95,87]
+
+document.write(`Com as notas: ${Notas}, você alcançou a pontuação equivalente a média ${media(Notas)}.`)
+
+// function media(notas){
+//     let somaNotas = 0
+//     for(nota of notas){
+//         somaNotas += nota
+//     }
+//     let media = somaNotas/notas.length
+
+//     if (media < 59) return 'F'
+//     if (media < 69) return 'D'
+//     if (media < 79) return 'C'
+//     if (media < 89) return 'B'
+//     return 'A'
+// }
+
+function media(notas){
+    let media = calcMedia(notas)
+
+    if (media < 59) return 'F'
+    if (media < 69) return 'D'
+    if (media < 79) return 'C'
+    if (media < 89) return 'B'
+    return 'A'
+
+    function calcMedia(notas){
+        let somaNotas = 0
+        for(let nota of notas){
+            somaNotas += nota
+        }
+        return somaNotas/notas.length
+    }
+}
+
+
+//==================================================
+//  (Mini-Projeto 9) - Contador de asteríscos
+//==================================================

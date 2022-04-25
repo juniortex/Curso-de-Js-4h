@@ -477,7 +477,7 @@ function somar3e5(limite){
 
 const Notas = [90,95,87]
 
-document.write(`Com as notas: ${Notas}, você alcançou a pontuação equivalente a média ${media(Notas)}.`)
+document.write(`Com as notas: ${Notas}, você alcançou a pontuação equivalente a média ${media(Notas)}.<hr>`)
 
 // function media(notas){
 //     let somaNotas = 0
@@ -515,3 +515,12 @@ function media(notas){
 //==================================================
 //  (Mini-Projeto 9) - Contador de asteríscos
 //==================================================
+// Criar uma função que exiba a quantidade de * que cada linha possui:
+
+exibirAsteriscos(10)
+function exibirAsteriscos(linhas){
+    let asteríscos = ''
+    for(let linha = 1; linha <= linhas; linha++)
+        asteríscos += '*<br>'
+        document.write(`${asteríscos}<hr>`)
+}

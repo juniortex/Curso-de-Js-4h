@@ -519,8 +519,35 @@ function media(notas){
 
 exibirAsteriscos(10)
 function exibirAsteriscos(linhas){
-    let asteríscos = ''
-    for(let linha = 1; linha <= linhas; linha++)
-        asteríscos += '*<br>'
-        document.write(`${asteríscos}<hr>`)
+    // let asteríscos = ''
+    // for(let linha = 1; linha <= linhas; linha++){
+    //     asteríscos += '*'
+    //     document.write(`${asteríscos}<br>`)
+    // }
+    // document.write('<hr>')
+
+    for(let linha = 1; linha <= linhas; linha++){
+        let asteríscos = ''
+        for(let i = 0; i < linha; i++){
+            asteríscos += '*'
+        }
+        document.write(`${asteríscos}<br>`)
+    }
+    document.write('<hr>')
+}
+
+
+//==================================================
+//  (Mini-Projeto 10) - Números primos
+//==================================================
+// Criar função para mostrar os números primos:
+// Primos
+// Compostos
+
+// Ex: 10, 11
+
+exibirNumerosPrimos(15);
+
+function exibirNumerosPrimos(limite){
+    
 }

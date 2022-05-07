@@ -541,13 +541,14 @@ function exibirAsteriscos(linhas){
 //  (Mini-Projeto 10) - Números primos
 //==================================================
 // Criar função para mostrar os números primos:
-// Primos
-// Compostos
 
-// Ex: 10, 11
+// Primos: números divisível apenas por 1 ou por eles mesmos.
+// Ex: 2,3,5,7,11,13...
+
+// Compostos
 
 exibirNumerosPrimos(15);
 
 function exibirNumerosPrimos(limite){
-    
+
 }
